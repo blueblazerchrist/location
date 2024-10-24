@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "b11fc8af-6aec-4ece-a46f-776688835291",
+		"name": "location",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35949811"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "MybZuzKy5gjqi1mQsUCHXkbz5YpzHdUoAX0Q1k0U3fe7d105",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "location.test/api/locations",
+					"host": [
+						"location",
+						"test"
+					],
+					"path": [
+						"api",
+						"locations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user@example.com\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "location.test/sanctum/token",
+					"host": [
+						"location",
+						"test"
+					],
+					"path": [
+						"sanctum",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
